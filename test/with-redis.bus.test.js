@@ -33,7 +33,7 @@ describe('with redis -- bus', function (){
       port: 6380,
 
       // Configure password to match .travis.yml
-      pass: 'secret',
+      // pass: 'secret',
 
     },
 
