@@ -610,9 +610,9 @@ describe('low-level socket methods:', function (){
     it('should not crash', function (done){
       theKing.get('/socketMethods/rooms', function (data, jwr) {
         if (jwr.error) return done(jwr.error);
-        assert(_.contains(data, 'beast2'), 'beast2 room should be in array returned from sails.sockets.rooms()');
-        assert(_.contains(data, 'test'), 'test room should be in array returned from sails.sockets.rooms()');
-        assert(_.contains(data, 'winterfell'), 'winterfell room should be in array returned from sails.sockets.rooms()');
+        assert(_.includes(data, 'beast2'), 'beast2 room should be in array returned from sails.sockets.rooms()');
+        assert(_.includes(data, 'test'), 'test room should be in array returned from sails.sockets.rooms()');
+        assert(_.includes(data, 'winterfell'), 'winterfell room should be in array returned from sails.sockets.rooms()');
         return done();
       });
     });
@@ -659,7 +659,7 @@ describe('low-level socket methods:', function (){
           if (firstName === 'ned') {
             return;
           }
-          assert(_.contains(data, socketId), ''+firstName+' should be in array returned from sails.sockets.subscribers("winterfell")');
+          assert(_.includes(data, socketId), ''+firstName+' should be in array returned from sails.sockets.subscribers("winterfell")');
         });
         return done();
       });
@@ -713,7 +713,7 @@ describe('low-level socket methods:', function (){
           if (firstName === 'ned') {
             return;
           }
-          assert(_.contains(data, socketId), ''+firstName+' should be in array returned from sails.sockets.subscribers("winterfell")');
+          assert(_.includes(data, socketId), ''+firstName+' should be in array returned from sails.sockets.subscribers("winterfell")');
         });
         return done();
       });

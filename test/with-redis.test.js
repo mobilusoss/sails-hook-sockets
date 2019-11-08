@@ -40,7 +40,7 @@ describe('with redis', function (){
       // Test advanced redis config: (will cause sockets hook to build raw redis clients):
       //
       // Configure password to match .travis.yml
-      pass: 'secret',
+      // pass: 'secret',
       // db: 'sails'
     },
 
@@ -103,7 +103,7 @@ describe('with redis', function (){
 
       'PUT /testroom/joinPlayroom': function (req, res) {
         req._sails.sockets.addRoomMembersToRooms('testroom', 'playroom', function(err) {
-          if (err) {return res.serverError(err);}
+          if (err) {return res.send(err);}
           // Add slight delay to allow all servers to react
           setTimeout(function(){res.send();}, 100);
         });
