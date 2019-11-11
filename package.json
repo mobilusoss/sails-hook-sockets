@@ -1,6 +1,6 @@
 {
   "name": "sails-hook-sockets",
-  "version": "0.13.14",
+  "version": "0.14.0",
   "description": "Implements socket.io support in Sails",
   "keywords": [
     "socket.io",
@@ -11,7 +11,7 @@
   "dependencies": {
     "async": "^3.1.0",
     "lodash": "^4.17.15",
-    "machinepack-urls": "git+https://github.com/mobilusoss/machinepack-urls.git#master",
+    "machinepack-urls": "git+https://github.com/mobilusoss/machinepack-urls.git#v6.1.0",
     "semver": "^4.3.4",
     "socket.io": "^2.3.0",
     "uid2": "0.0.3"
